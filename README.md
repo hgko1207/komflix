@@ -2,6 +2,15 @@
 
 Learning React and ES6 by building a Movie Discovery App.
 
+## Package Add
+
+```bash
+yarn add prop-types
+yarn add styled-components
+yarn add styled-reset
+yarn add axios
+```
+
 ## Screens
 
 - [ ] Home
@@ -9,17 +18,15 @@ Learning React and ES6 by building a Movie Discovery App.
 - [ ] Serach
 - [ ] Detail
 
-#### API
+## API Verbs
 
-- https://www.themoviedb.org/documentation/api
+https://www.themoviedb.org/documentation/api
 
-#### Package Add
-
-```bash
-yarn add prop-types
-yarn add styled-components
-yarn add styled-reset
-```
+- [ ] Now playing (Movie)
+- [ ] Upcoming (Movie)
+- [ ] Top Rated (TV, Movie)
+- [ ] Popular (TV, Movie)
+- [ ] Airing Today (TV)
 
 ## ??
 
