@@ -9,6 +9,10 @@ Learning React and ES6 by building a Movie Discovery App.
 - [ ] Serach
 - [ ] Detail
 
+#### API
+
+- https://www.themoviedb.org/documentation/api
+
 #### Package Add
 
 ```bash
@@ -17,6 +21,6 @@ yarn add styled-components
 yarn add styled-reset
 ```
 
-## 참고
+## ??
 
 - [REACT ROUTER](https://reacttraining.com/react-router/web/guides/quick-start)
