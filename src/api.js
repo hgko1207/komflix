@@ -13,6 +13,6 @@ const api = axios.create({
 });
 
 // "/" 시작하는 것은 절대경로를 의미한다. 그래서 앞에 "/"를 뺀 상대경로를 쓴다.
-api.get("tv/popular", params);
+//api.get("tv/popular", params);
 
 export default api;
