@@ -33,7 +33,7 @@ https://www.themoviedb.org/documentation/api
 
 ## Component
 
-- ???? ???? ??
+- Container Presenter Pattern
 
 ## ??
 
