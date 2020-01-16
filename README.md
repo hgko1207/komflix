@@ -27,8 +27,9 @@ https://www.themoviedb.org/documentation/api
 - [x] Top Rated (TV)
 - [x] Popular (TV, Movie)
 - [x] Airing Today (TV)
-- [ ] TV Show Detail
-- [ ] Movie Detail
+- [x] TV Show Detail
+- [x] Movie Detail
+- [x] Search (Movies, TV)
 
 ## ??
 
