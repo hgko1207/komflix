@@ -31,6 +31,10 @@ https://www.themoviedb.org/documentation/api
 - [x] Movie Detail
 - [x] Search (Movies, TV)
 
+## Component
+
+- ???? ???? ??
+
 ## ??
 
 - [REACT ROUTER](https://reacttraining.com/react-router/web/guides/quick-start)
