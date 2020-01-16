@@ -15,4 +15,14 @@ const api = axios.create({
 // "/" 시작하는 것은 절대경로를 의미한다. 그래서 앞에 "/"를 뺀 상대경로를 쓴다.
 //api.get("tv/popular", params);
 
-export default api;
+export const moviesApi = {
+  nowPalying: () => api.get("movie/now_playing", params),
+  upcoming: () => api.get("movie/upcoming", params),
+  popular: () => api.get("movie/popular", params)
+};
+
+export const tvApi = {
+  topRated: () => api.get("tv/top_rated", params),
+  popular: () => api.get("tv/popular", params),
+  airingToday: () => api.get("tv/airing_today", params)
+};
