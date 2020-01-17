@@ -13,8 +13,12 @@ export default class HomeContainer extends Component {
 
   async componentDidMount() {
     try {
-      const { nowPalying } = await moviesApi.nowPalying();
-      console.log(nowPalying);
+      const {
+        data: { results: nowPalying }
+      } = await moviesApi.nowPalying();
+      const upcoming = await moviesApi.upcoming();
+      console.log(upcoming);
+      this.setState({ nowPalying: nowPalying });
     } catch (error) {
       this.setState({ error: "Can't find movies information." });
     } finally {
