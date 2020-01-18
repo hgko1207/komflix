@@ -16,9 +16,18 @@ export default class HomeContainer extends Component {
       const {
         data: { results: nowPalying }
       } = await moviesApi.nowPalying();
-      const upcoming = await moviesApi.upcoming();
-      console.log(upcoming);
-      this.setState({ nowPalying: nowPalying });
+      const {
+        data: { results: upcoming }
+      } = await moviesApi.upcoming();
+      const {
+        data: { results: popular }
+      } = await moviesApi.popular();
+
+      this.setState({
+        nowPalying,
+        upcoming,
+        popular
+      });
     } catch (error) {
       this.setState({ error: "Can't find movies information." });
     } finally {
