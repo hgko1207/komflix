@@ -23,13 +23,9 @@ export default class HomeContainer extends Component {
         data: { results: popular }
       } = await moviesApi.popular();
 
-      this.setState({
-        nowPalying,
-        upcoming,
-        popular
-      });
+      this.setState({ nowPalying, upcoming, popular });
     } catch (error) {
-      this.setState({ error: "Can't find movies information." });
+      this.setState({ error: "Can't find movie information." });
     } finally {
       this.setState({ loading: false });
     }
