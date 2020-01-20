@@ -22,7 +22,7 @@ export default class HomeContainer extends Component {
       const {
         data: { results: popular }
       } = await moviesApi.popular();
-      throw Error();
+
       this.setState({ nowPalying, upcoming, popular });
     } catch (error) {
       this.setState({ error: "Can't find movie information." });
