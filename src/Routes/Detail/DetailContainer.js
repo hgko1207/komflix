@@ -34,11 +34,9 @@ export default class DetailContainer extends Component {
     let result = null;
     try {
       if (isMovie) {
-        const request = await moviesApi.movieDetail(parsedId);
-        result = request.data;
+        ({ data: result } = await moviesApi.movieDetail(parsedId));
       } else {
-        const request = await tvApi.showDetail(parsedId);
-        result = request.data;
+        ({ data: result } = await tvApi.showDetail(parsedId));
       }
       console.log(result);
     } catch (error) {
@@ -49,7 +47,6 @@ export default class DetailContainer extends Component {
   }
 
   render() {
-    console.log(this.state);
     const { result, error, loading } = this.state;
     return <DetailPresenter result={result} error={error} loading={loading} />;
   }
