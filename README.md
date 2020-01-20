@@ -35,6 +35,11 @@ https://www.themoviedb.org/documentation/api
 
 - Container Presenter Pattern
 
+## CSS
+
+- CSS masterclass
+- CSS selectors
+
 ## Reference
 
 - [REACT ROUTER](https://reacttraining.com/react-router/web/guides/quick-start)
