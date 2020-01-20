@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "Components/Section";
 import Loader from "../../Components/Loader";
 
 const Container = styled.div`
-  padding: 0px 10px;
+  padding: 0px 20px;
 `;
 
 const HomePresenter = ({ nowPalying, upcoming, popular, error, loading }) =>
