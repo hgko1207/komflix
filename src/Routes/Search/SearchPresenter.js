@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Loader from "../../Components/Loader";
 import Section from "../../Components/Section";
 import Message from "../../Components/Message";
@@ -31,9 +32,16 @@ const SearchPresenter = ({
   updateTerm
 }) => (
   <Container>
+    <Helmet>
+      <title>Search | Komflix</title>
+    </Helmet>
     {/* Enter의 기존은 sumbit이다. */}
     <Form onSubmit={handleSubmit}>
-      <Input placeholder="Search Movies or TV Shows..." value={searchTerm} onChange={updateTerm} />
+      <Input
+        placeholder="Search Movies or TV Shows..."
+        value={searchTerm}
+        onChange={updateTerm}
+      />
     </Form>
     {loading ? (
       <Loader />
@@ -72,9 +80,12 @@ const SearchPresenter = ({
       </>
     )}
     {error && <Message color="#e74c3c" text={error} />}
-    {tvResults && movieResults && tvResults.length === 0 && movieResults.length === 0 && (
-      <Message text="Nothing found" color="#95a5a6" />
-    )}
+    {tvResults &&
+      movieResults &&
+      tvResults.length === 0 &&
+      movieResults.length === 0 && (
+        <Message text="Nothing found" color="#95a5a6" />
+      )}
   </Container>
 );
 

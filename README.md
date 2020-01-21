@@ -9,6 +9,7 @@ yarn add prop-types
 yarn add styled-components
 yarn add styled-reset
 yarn add axios
+yarn add react-helmet
 ```
 
 ## Screens
@@ -39,6 +40,10 @@ https://www.themoviedb.org/documentation/api
 
 - CSS masterclass
 - CSS selectors
+
+## React helmet
+
+웹 사이트의 head를 쉽게 수정할 수 있다.
 
 ## Reference
 
