@@ -2,7 +2,7 @@ import axios from "axios";
 
 const params = {
   api_key: "8b4c941053c92f80f2f0a95c781d6892",
-  language: "en-US"
+  language: "ko"
 };
 
 const api = axios.create({

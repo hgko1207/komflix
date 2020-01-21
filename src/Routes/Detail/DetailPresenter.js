@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 import Loader from "../../Components/Loader";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -44,7 +46,7 @@ const Cover = styled.div`
 
 const Data = styled.div`
   width: 70%;
-  margin-left: 10px;
+  margin-left: 20px;
 `;
 
 const Title = styled.h3`
@@ -52,6 +54,7 @@ const Title = styled.h3`
 `;
 
 const ItemContainer = styled.div`
+  display: flex;
   margin: 20px 0;
 `;
 
@@ -66,6 +69,42 @@ const Overview = styled.p`
   opacity: 0.7;
   line-height: 1.5;
   width: 50%;
+`;
+
+const Link = styled.a`
+  all: unset;
+  width: 20px;
+  height: 10px;
+  background-color: rgb(245, 197, 24);
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 2px 5px;
+`;
+
+const TabStyle = {
+  marginTop: "20px",
+  width: "50%"
+};
+
+const TabPanelStyle = {
+  padding: "10px",
+  fontSize: "12px"
+};
+
+const VideoContent = styled.div`
+  margin-bottom: 12px;
+  transition: all 0.3s ease-in-out 0s;
+  &:hover {
+    font-size: 14px;
+  }
+`;
+
+const TabContent = styled.div`
+  margin-bottom: 10px;
 `;
 
 const DetailPresenter = ({ result, error, loading }) =>
@@ -120,8 +159,54 @@ const DetailPresenter = ({ result, error, loading }) =>
                     : `${genre.name} / `
                 )}
             </Item>
+            <Divider>•</Divider>
+            <Item>
+              <Link
+                href={`https://www.imdb.com/title/${result.imdb_id}`}
+                target="_blank"
+                bgImage={require("../../assets/logoImdb.png")}
+              >
+                Imdb
+              </Link>
+            </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
+          <Tabs style={TabStyle}>
+            <TabList>
+              <Tab>Youtube</Tab>
+              <Tab>Production Company</Tab>
+              <Tab>Production Countries</Tab>
+            </TabList>
+
+            <TabPanel style={TabPanelStyle}>
+              {result.videos.results
+                ? result.videos.results.map(video => (
+                    <VideoContent>
+                      <a
+                        href={`https://www.youtube.com/watch?v=${video.key}`}
+                        target="_blank"
+                      >
+                        {video.name}
+                      </a>
+                    </VideoContent>
+                  ))
+                : ""}
+            </TabPanel>
+            <TabPanel style={TabPanelStyle}>
+              {result.production_companies
+                ? result.production_companies.map(company => (
+                    <TabContent>{company.name}</TabContent>
+                  ))
+                : ""}
+            </TabPanel>
+            <TabPanel style={TabPanelStyle}>
+              {result.production_countries
+                ? result.production_countries.map(country => (
+                    <TabContent>{country.name}</TabContent>
+                  ))
+                : ""}
+            </TabPanel>
+          </Tabs>
         </Data>
       </Content>
     </Container>
