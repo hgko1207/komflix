@@ -119,13 +119,10 @@ const DetailPresenter = ({ result, error, loading }) =>
     <Container>
       <Helmet>
         <title>
-          {result.original_title ? result.original_title : result.original_name}{" "}
-          | Nomflix
+          {result.original_title ? result.original_title : result.original_name} | Nomflix
         </title>
       </Helmet>
-      <Backdrop
-        bgImage={`https://image.tmdb.org/t/p/original${result.backdrop_path}`}
-      />
+      <Backdrop bgImage={`https://image.tmdb.org/t/p/original${result.backdrop_path}`} />
       <Content>
         <Cover
           bgImage={
@@ -135,11 +132,7 @@ const DetailPresenter = ({ result, error, loading }) =>
           }
         />
         <Data>
-          <Title>
-            {result.original_title
-              ? result.original_title
-              : result.original_name}
-          </Title>
+          <Title>{result.original_title ? result.original_title : result.original_name}</Title>
           <ItemContainer>
             <Item>
               {result.release_date
@@ -147,16 +140,12 @@ const DetailPresenter = ({ result, error, loading }) =>
                 : result.first_air_date.substring(0, 4)}
             </Item>
             <Divider>•</Divider>
-            <Item>
-              {result.runtime ? result.runtime : result.episode_run_time[0]} min
-            </Item>
+            <Item>{result.runtime ? result.runtime : result.episode_run_time[0]} min</Item>
             <Divider>•</Divider>
             <Item>
               {result.genres &&
                 result.genres.map((genre, index) =>
-                  index === result.genres.length - 1
-                    ? genre.name
-                    : `${genre.name} / `
+                  index === result.genres.length - 1 ? genre.name : `${genre.name} / `
                 )}
             </Item>
             <Divider>•</Divider>
@@ -182,10 +171,7 @@ const DetailPresenter = ({ result, error, loading }) =>
               {result.videos.results
                 ? result.videos.results.map(video => (
                     <VideoContent>
-                      <a
-                        href={`https://www.youtube.com/watch?v=${video.key}`}
-                        target="_blank"
-                      >
+                      <a href={`https://www.youtube.com/watch?v=${video.key}`} target="_blank">
                         {video.name}
                       </a>
                     </VideoContent>
