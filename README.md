@@ -46,6 +46,14 @@ https://www.themoviedb.org/documentation/api
 
 웹 사이트의 head를 쉽게 수정할 수 있다.
 
+## Deploying to Github Pages
+
+- npm i gh-pages
+
+1. package.jon -> homepage 변경
+2. scripts -> "deploy": "gh-pages -d build", "predeploy": "npm run build" 추가
+3. npm run deploy 실행
+
 ## Reference
 
 - [REACT ROUTER](https://reacttraining.com/react-router/web/guides/quick-start)
