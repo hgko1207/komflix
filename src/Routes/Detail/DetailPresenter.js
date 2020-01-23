@@ -171,7 +171,11 @@ const DetailPresenter = ({ result, error, loading }) =>
               {result.videos.results
                 ? result.videos.results.map(video => (
                     <VideoContent>
-                      <a href={`https://www.youtube.com/watch?v=${video.key}`} target="_blank">
+                      <a
+                        href={`https://www.youtube.com/watch?v=${video.key}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {video.name}
                       </a>
                     </VideoContent>

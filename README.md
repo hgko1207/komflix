@@ -11,6 +11,7 @@ yarn add styled-reset
 yarn add axios
 yarn add react-helmet
 yarn add react-tabs
+yarn add gh-pages
 ```
 
 ## Screens
@@ -48,11 +49,18 @@ https://www.themoviedb.org/documentation/api
 
 ## Deploying to Github Pages
 
-- npm i gh-pages
+```bash
+npm i gh-pages
+yarn add gh-pages
+```
 
 1. package.jon -> homepage 변경
 2. scripts -> "deploy": "gh-pages -d build", "predeploy": "npm run build" 추가
 3. npm run deploy 실행
+
+## Deploying to Netlify
+
+- 계정을 github와 연결
 
 ## Reference
 

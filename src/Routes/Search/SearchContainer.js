@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SearchPresenter from "./SearchPresenter";
-import { moviesApi, tvApi } from "api";
+import { moviesApi, tvApi } from "../../api";
 
 export default class SearchContainer extends Component {
   state = {
