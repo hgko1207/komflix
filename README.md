@@ -54,14 +54,19 @@ npm i gh-pages
 yarn add gh-pages
 ```
 
-1. package.jon -> homepage 변경
+1. package.jon -> "homepage": "https://hgko1207.github.io/nomflix" 추가
 2. scripts -> "deploy": "gh-pages -d build", "predeploy": "npm run build" 추가
 3. npm run deploy 실행
 
 ## Deploying to Netlify
 
 - 계정을 github와 연결
+- Build가 제대로 되게 하려면 package.json -> "homepage": "./" 를 추가한다.
 
 ## Reference
 
 - [REACT ROUTER](https://reacttraining.com/react-router/web/guides/quick-start)
+
+# Preview:
+
+Try it on [netlify](https://dazzling-torvalds-c3f876.netlify.com/#/)
