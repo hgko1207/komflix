@@ -54,7 +54,7 @@ npm i gh-pages
 yarn add gh-pages
 ```
 
-1. package.jon -> "homepage": "https://hgko1207.github.io/nomflix" 추가
+1. package.jon -> "homepage": "https://hgko1207.github.io/komflix" 추가
 2. scripts -> "deploy": "gh-pages -d build", "predeploy": "npm run build" 추가
 3. npm run deploy 실행
 

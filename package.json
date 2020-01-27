@@ -1,5 +1,5 @@
 {
-  "name": "nomflix",
+  "name": "komflix",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,7 +43,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hgko1207/nomflix.git"
+    "url": "git+https://github.com/hgko1207/komflix.git"
   },
   "keywords": [
     "react"
@@ -51,7 +51,7 @@
   "author": "hgko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hgko1207/nomflix/issues"
+    "url": "https://github.com/hgko1207/komflix/issues"
   },
   "homepage": "./"
 }
